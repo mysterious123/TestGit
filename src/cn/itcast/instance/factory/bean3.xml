@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+       <!--配置工厂-->
+      <bean id="MyBean3Factory" class="cn.itcast.instance.factory.MyBean3Factory">
+          <!--使用factory-bean属性配置一个实例工厂，使用factory-method属性确定使用工厂中的那个方法-->
+      </bean>
+
+      <bean id="bean3" factory-bean="MyBean3Factory" factory-method="createBean">
+      </bean>
+</beans>
